@@ -54,6 +54,9 @@ function cargarForm() {
     }, {
         name: "value",
         value: "Enviar"
+    }, {
+        name: "disabled",
+        value: true
     }]);
     zonaFormulario.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -76,6 +79,10 @@ function calcularEstrellas(event) {
         estrellas[cont].firstElementChild.setAttribute("src", "./img/estrellaAmarilla.png");
     }
     document.forms[0].elements[5].setAttribute("value", valorUser); //Cambiar valor del Hidden
+    let estadoEnv = document.forms[0].elements[6];
+    if (estadoEnv.getAttribute("disabled") == "true") {
+        document.forms[0].elements[6].removeAttribute("disabled");
+    }
 }
 
 //IMPRIME el section o lo EDITA
