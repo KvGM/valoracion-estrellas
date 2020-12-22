@@ -81,7 +81,7 @@ function calcularEstrellas(event) {
     document.forms[0].elements[5].setAttribute("value", valorUser); //Cambiar valor del Hidden
     let estadoEnv = document.forms[0].elements[6];
     if (estadoEnv.getAttribute("disabled") == "true") {
-        document.forms[0].elements[6].removeAttribute("disabled");
+        estadoEnv.removeAttribute("disabled");
     }
 }
 
